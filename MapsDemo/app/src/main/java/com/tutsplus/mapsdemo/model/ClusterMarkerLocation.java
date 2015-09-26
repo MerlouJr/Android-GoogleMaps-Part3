@@ -18,4 +18,8 @@ public class ClusterMarkerLocation implements ClusterItem {
     public LatLng getPosition() {
         return position;
     }
+
+    public void setPosition( LatLng position ) {
+        this.position = position;
+    }
 }

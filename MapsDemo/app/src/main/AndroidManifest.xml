@@ -33,6 +33,7 @@
         <activity android:name=".activity.ClusterMarkerActivity" />
         <activity android:name=".activity.HeatMapActivity" />
         <activity android:name=".activity.PolylineActivity" />
+        <activity android:name=".activity.SphericalGeometryActivity" />
     </application>
 
 </manifest>

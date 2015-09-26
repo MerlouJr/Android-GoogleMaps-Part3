@@ -12,6 +12,7 @@ import com.tutsplus.mapsdemo.R;
 import com.tutsplus.mapsdemo.activity.ClusterMarkerActivity;
 import com.tutsplus.mapsdemo.activity.HeatMapActivity;
 import com.tutsplus.mapsdemo.activity.PolylineActivity;
+import com.tutsplus.mapsdemo.activity.SphericalGeometryActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,7 +43,7 @@ public class UtilsListFragment extends ListFragment {
         } else if( getString( R.string.item_polylines ).equalsIgnoreCase( item ) ) {
             startActivity( new Intent( getActivity(), PolylineActivity.class ) );
         } else if( getString( R.string.item_spherical_geometry ).equalsIgnoreCase( item ) ) {
-
+            startActivity( new Intent( getActivity(), SphericalGeometryActivity.class ) );
         }
     }
 }

@@ -1,7 +1,5 @@
 package com.tutsplus.mapsdemo.activity;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.TileOverlay;
 import com.google.android.gms.maps.model.TileOverlayOptions;
@@ -15,8 +13,6 @@ import java.util.Random;
  */
 public class HeatMapActivity extends BaseMapActivity {
 
-    private LatLng mCenterLocation = new LatLng( 39.7392, -104.9903 );
-
     private HeatmapTileProvider mProvider;
     private TileOverlay mOverlay;
 
@@ -24,7 +20,7 @@ public class HeatMapActivity extends BaseMapActivity {
     protected void initMapSettings() {
         ArrayList<LatLng> locations = generateLocations();
         mProvider = new HeatmapTileProvider.Builder().data( locations ).build();
-        mOverlay = mGoogleMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
+        mOverlay = mGoogleMap.addTileOverlay( new TileOverlayOptions().tileProvider( mProvider ) );
         mProvider.setRadius( HeatmapTileProvider.DEFAULT_RADIUS );
     }
 
@@ -46,17 +42,5 @@ public class HeatMapActivity extends BaseMapActivity {
         }
 
         return locations;
-    }
-
-    @Override
-    protected void initCamera() {
-        CameraPosition position = CameraPosition.builder()
-                .target( mCenterLocation )
-                .zoom( 12f )
-                .bearing( 0.0f )
-                .tilt( 0.0f )
-                .build();
-
-        mGoogleMap.animateCamera(CameraUpdateFactory.newCameraPosition(position), null);
     }
 }
