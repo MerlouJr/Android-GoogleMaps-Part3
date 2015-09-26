@@ -3,6 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
     <item android:id="@+id/action_distance" android:title="@string/action_distance"
         android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/action_heading" android:title="@string/action_distance"
+    <item android:id="@+id/action_heading" android:title="@string/action_heading"
         android:orderInCategory="200" app:showAsAction="never" />
 </menu>
