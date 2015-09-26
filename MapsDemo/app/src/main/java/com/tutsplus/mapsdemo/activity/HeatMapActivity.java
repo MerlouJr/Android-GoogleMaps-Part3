@@ -14,14 +14,13 @@ import java.util.Random;
 public class HeatMapActivity extends BaseMapActivity {
 
     private HeatmapTileProvider mProvider;
-    private TileOverlay mOverlay;
 
     @Override
     protected void initMapSettings() {
         ArrayList<LatLng> locations = generateLocations();
         mProvider = new HeatmapTileProvider.Builder().data( locations ).build();
-        mOverlay = mGoogleMap.addTileOverlay( new TileOverlayOptions().tileProvider( mProvider ) );
         mProvider.setRadius( HeatmapTileProvider.DEFAULT_RADIUS );
+        mGoogleMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
     }
 
     private ArrayList<LatLng> generateLocations() {
